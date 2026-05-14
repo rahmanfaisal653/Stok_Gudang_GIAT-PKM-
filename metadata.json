@@ -1,0 +1,6 @@
+{
+  "name": "STOK ATK GUDANG",
+  "description": "A comprehensive office supplies stock management application with real-time dashboard, inventory CRUD, and transaction history, integrated with Google Sheets and Gemini AI for stock insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
