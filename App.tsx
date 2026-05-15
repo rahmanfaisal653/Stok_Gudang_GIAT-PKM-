@@ -95,24 +95,25 @@ const LoginPage = ({ onLogin }: { onLogin: () => void }) => {
   };
 
   return (
-    <div className="min-h-screen flex font-sans bg-white overflow-hidden">
-      {/* Left Side: Login Form */}
-      <div className="w-full lg:w-[40%] flex flex-col justify-between px-8 py-8 lg:px-16 lg:py-12 relative z-10 bg-white shadow-[20px_0_40px_-20px_rgba(0,0,0,0.05)]">
-        <div>
-          <div className="flex items-center gap-2 mb-12">
-            <div className="relative">
-               <img src={LOGO_URL} alt="Logo" className="w-8 h-8 object-contain" />
-            </div>
+    <div className="min-h-screen flex font-sans bg-slate-100 p-4 lg:p-8 items-center justify-center">
+      <div className="w-full max-w-[1100px] h-auto min-h-[600px] max-h-[90vh] flex bg-white rounded-[32px] overflow-hidden shadow-2xl border border-slate-100">
+        {/* Left Side: Login Form */}
+        <div className="w-full lg:w-[45%] flex flex-col justify-between px-8 py-8 lg:px-16 lg:py-10 bg-white relative z-10 overflow-y-auto">
+          <div>
+            <div className="flex items-center gap-2 mb-12">
+              <div className="relative">
+                 <img src="/assets/logo%20giat%20remove%20bg.png" alt="Logo" className="w-8 h-8 object-contain" />
+              </div>
             <span className="font-bold text-xl tracking-tight text-slate-900">
               ATK<span className="text-[#E53935]">GIAT</span>
             </span>
           </div>
 
-          <div className="max-w-md mt-10">
+          <div className="max-w-md mt-8">
             <h1 className="text-3xl lg:text-[2.5rem] font-bold text-slate-900 mb-2 tracking-tight leading-tight">
               Selamat Datang di<br/>ATK <span className="text-[#E53935]">GIAT</span>
             </h1>
-            <p className="text-sm text-slate-500 mb-10">Sistem Inventaris dan Transaksi Barang Kantor</p>
+            <p className="text-sm text-slate-500 mb-8">Sistem Inventaris dan Transaksi Barang Kantor</p>
 
             <form onSubmit={handleLogin} className="space-y-6">
               {error && (
@@ -189,7 +190,7 @@ const LoginPage = ({ onLogin }: { onLogin: () => void }) => {
           </div>
         </div>
 
-        <div className="mt-16 space-y-4">
+        <div className="mt-8 pt-6 border-t border-slate-50 space-y-4">
           <div className="flex items-center gap-2 text-[11px] text-slate-400">
              <ShieldCheck size={14} className="text-slate-400" />
              <span>Aman dan terenkripsi. Data Anda terlindungi.</span>
@@ -198,27 +199,16 @@ const LoginPage = ({ onLogin }: { onLogin: () => void }) => {
             &copy; {new Date().getFullYear()} ATK GIAT. All rights reserved.
           </p>
         </div>
-      </div>
-
-      {/* Right Side: Illustration */}
-      <div className="hidden lg:flex flex-1 relative bg-slate-50 items-center justify-center p-12">
-         {/* Decorative red curve */}
-         <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
-            <svg viewBox="0 0 1000 1000" className="absolute -top-[10%] -right-[10%] w-[120%] h-[120%] text-red-100 opacity-50" preserveAspectRatio="none">
-              <path fill="currentColor" d="M0,0 L1000,0 L1000,1000 C600,800 800,200 0,0 Z"></path>
-            </svg>
-            <svg viewBox="0 0 1000 1000" className="absolute -bottom-[10%] -left-[10%] w-[120%] h-[120%] text-red-100 opacity-30 transform rotate-180" preserveAspectRatio="none">
-              <path fill="currentColor" d="M0,0 L1000,0 L1000,1000 C600,800 800,200 0,0 Z"></path>
-            </svg>
-         </div>
-
-         <div className="w-full max-w-4xl relative z-10 flex justify-center">
-            <img 
-               src="/assets/warehouse_illustration.png" 
-               alt="Warehouse Management" 
-               className="w-full h-auto max-h-[85vh] object-contain drop-shadow-2xl mix-blend-multiply" 
-            />
-         </div>
+        </div>
+        
+        {/* Right Side: Illustration */}
+        <div className="hidden lg:block flex-1 relative bg-slate-50">
+           <img 
+              src="/assets/halaman_login.png" 
+              alt="Warehouse Management" 
+              className="absolute inset-0 w-full h-full object-cover object-left" 
+           />
+        </div>
       </div>
     </div>
   );
