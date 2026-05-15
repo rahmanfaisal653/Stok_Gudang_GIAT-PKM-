@@ -242,9 +242,7 @@ const Sidebar = ({ isOpen, toggle, onLogoutClick }: { isOpen: boolean; toggle: (
       <aside className={`fixed top-0 left-0 h-full w-64 bg-white border-r border-slate-100 z-30 transition-transform duration-300 flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.02)] ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="h-24 flex items-center px-8 border-b border-slate-50">
           <div className="flex items-center gap-3">
-             <div className="w-10 h-10 rounded-[12px] bg-[#E53935] flex items-center justify-center text-white shadow-sm">
-                <Box size={20} className="fill-white" />
-             </div>
+             <img src="/assets/logo%20giat%20remove%20bg.png" alt="Logo GIAT" className="w-10 h-10 object-contain" />
              <div>
                 <h1 className="text-[18px] font-black tracking-tight text-slate-800 leading-none">ATK<span className="text-[#E53935]">GIAT</span></h1>
              </div>
