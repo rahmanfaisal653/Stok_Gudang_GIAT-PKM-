@@ -1,7 +1,7 @@
 
 // This would be your GAS Web App URL after deployment
 // Add explicit : string type to prevent TypeScript literal type overlap errors
-const GAS_URL: string = 'https://script.google.com/macros/s/AKfycbzSGJMO2S6G8q0fvywlMKlXuTPmYwni0ffWOQvgI8UUyfd5YJ3SLLFZ-KDlsnnmVz5G/exec';
+const GAS_URL: string = 'http://localhost:3001';
 
 export const sheetService = {
   // Since we can't actually call a remote GAS without the user's URL,
@@ -45,6 +45,7 @@ export const sheetService = {
       }
       const response = await fetch(GAS_URL, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
       return await response.json();
